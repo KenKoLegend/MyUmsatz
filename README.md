@@ -29,7 +29,8 @@ Use the "Add" button to create a new transaction, providing the necessary detail
 Select a transaction from the table to edit or delete it using the corresponding buttons.
 Customize the appearance or behavior of the application as needed by modifying the code or XAML files.
 
-![thumbnail](https://github.com/KenKoLegend/MyUmsatz/assets/50487808/6eaa6eba-ae51-4a75-9ccd-8c0053518d61)
+
+![6565](https://github.com/KenKoLegend/MyUmsatz/assets/50487808/84291274-36de-4f35-a24a-559994088308)
 
 
 
