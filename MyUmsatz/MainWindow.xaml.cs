@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using MyUmsatz.Model;
+using MyUmsatz.ViewModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,7 +19,8 @@ namespace MyUmsatz
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new UmsatzViewModel();
+            UmsatzViewModel umsatzViewModel = new UmsatzViewModel();
+            this.DataContext = umsatzViewModel;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

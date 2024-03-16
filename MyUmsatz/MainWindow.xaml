@@ -8,7 +8,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         Background='White' WindowStyle='None'
-        MouseDown="Window_MouseDown" ResizeMode="CanResizeWithGrip">
+        Language="de-DE"
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
+      
     <WindowChrome.WindowChrome>
         <WindowChrome 
         CaptionHeight="0"
@@ -57,10 +60,21 @@
         </Grid>
         <!-- Sidebar End -->
         <!--#endregion-->
+       
         <Border Background="#272c42" BorderBrush="#272c42" BorderThickness="5" Grid.Row="2" Grid.Column="2" CornerRadius="20,0,0,0">
-            <Grid>
-                <UserControls:Umsaetze/>
-            </Grid>
+            
+            <ListView HorizontalAlignment="Right" ItemsSource="{Binding Umsaetze}" Name="UmsatzList" BorderBrush="#272c42" Margin="5" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Datum von"  DisplayMemberBinding="{Binding DatumVon}" Width="80"/>
+                        <GridViewColumn Header="bis" DisplayMemberBinding="{Binding DatumBis}" Width="80"/>
+                        <GridViewColumn Header="Beschreibung" DisplayMemberBinding="{Binding Beschreibung}" Width="200"/>
+                        <GridViewColumn Header="Bank" DisplayMemberBinding="{Binding Bank}" Width="150"/>
+                        <GridViewColumn Header="Betrag" DisplayMemberBinding="{Binding Betrag, StringFormat='\{0:€ #,##0.00\}'}" Width="80"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            
         </Border>
         <Label Content="Predicto" HorizontalAlignment="Left" Margin="6,-5,0,0" VerticalAlignment="Top" FontSize="19" FontStyle="Italic" Width="81" Foreground="GhostWhite"/>
     </Grid>

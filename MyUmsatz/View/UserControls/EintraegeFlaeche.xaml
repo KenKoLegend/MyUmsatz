@@ -1,12 +1,11 @@
-﻿<UserControl x:Class="MyUmsatz.View.UserControls.Umsaetze"
+﻿<UserControl x:Class="MyUmsatz.View.UserControls.EintraegeFlaeche"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:MyUmsatz.View.UserControls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:UserControls="clr-namespace:MyUmsatz.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="420" d:DesignWidth="420">
-    <UserControl.Resources>
+ <UserControl.Resources>
         <Style x:Key="{ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}" TargetType="{x:Type Button}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -30,7 +29,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-       
+
         <Style x:Key="DataGridStyle" TargetType="{x:Type DataGrid}">
             <Setter Property="Background" Value="#272c42"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
@@ -89,11 +88,21 @@
             </Style.Triggers>
         </Style>
     </UserControl.Resources>
-    <Border CornerRadius="20" BorderBrush="#272c42" BorderThickness="10">
+    <Border Background="#272c42" CornerRadius="20" BorderBrush="#272c42" BorderThickness="10">
         <Grid>
-            <Border BorderBrush="#272c42" BorderThickness="12" CornerRadius="20,0,0,0">
-                <DataGrid Style="{DynamicResource DataGridStyle}" HeadersVisibility="Column"  ItemsSource="{Binding UmsatzListe}" SelectedItem="{Binding SelectedUmsatz}" AutoGenerateColumns="True"/>
-            </Border>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="57.143"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <UserControls:TextBoxen Grid.Row="0"/>
         </Grid>
+        
     </Border>
+    
 </UserControl>

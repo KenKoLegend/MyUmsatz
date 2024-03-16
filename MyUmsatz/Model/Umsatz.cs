@@ -8,12 +8,12 @@ namespace MyUmsatz.Model
 {
     public class Umsatz
     {
-        public string Datum { get; set; }
-        public string Beschreibung { get; set; }
-        public string Bankname { get; set; }
-        public decimal Betrag { get; set; }
 
-        public bool Bezahlt { get; set; }
+        public string? DatumVon { get; set; }
+        public string? DatumBis { get; set; }
+        public string? Beschreibung { get; set; }
+        public string? Bank { get; set; }
+        public decimal? Betrag { get; set; }
 
     }
 
